@@ -58,103 +58,18 @@
   </div>
   <h2 class="headingLarge textcenter">Menneskene i blank</h2>
 
+  {% for employee in all_employees %}
+
   <div class="third left mobilehalf bggray-light">
     <div class="box">
-      <h3 class="headingNormal">Erlend Oftedal</h3>
+      <h3 class="headingNormal">{{employee.name}}</h3>
       <div class="line half bgblue"></div>
-      <p><a href="mailto:eo@blankoslo.no" class="textlink">eo@blankoslo.no</a></p>
-      <img class="full" src="img/erlendoftedal.jpg" alt="Erlend Oftedal">
+      <p><a href="mailto:{{employee.email}}" class="textlink">{{employee.email}}</a></p>
+      <img class="full" src="{{employee.image.url}}" alt="{{employee.name}}">
     </div>
   </div>
-  <div class="third left mobilehalf bggray-light">
-    <div class="box">
-      <h3 class="headingNormal">Jahn Arne Johnsen</h3>
-      <div class="line half bgblue"></div>
-      <p><a href="mailto:jaj@blankoslo.no" class="textlink">jaj@blankoslo.no</a></p>
-      <img class="full" src="img/jahnarnejohnsen.jpg" alt="Jahn Arne Johnsen">
-    </div>
-  </div>
-  <div class="third left mobilehalf bggray-light">
-    <div class="box">
-      <h3 class="headingNormal">John Korsnes</h3>
-      <div class="line half bgred"></div>
-      <p><a href="mailto:jk@blankoslo.no" class="textlink">jk@blankoslo.no</a></p>
-      <img class="full" src="img/johnkorsnes.jpg" alt="John Korsnes">
-    </div>
-  </div>
-  <div class="third left mobilehalf bggray-light">
-    <div class="box">
-      <h3 class="headingNormal">Jon Olsen</h3>
-      <div class="line half bgyellow"></div>
-      <p><a href="mailto:jbo@blankoslo.no" class="textlink">jbo@blankoslo.no</a></p>
-      <img class="full" src="img/jonolsen.jpg" alt="Jon Olsen">
-    </div>
-  </div>
-  <div class="third left mobilehalf bggray-light">
-    <div class="box">
-      <h3 class="headingNormal">Lars Skjelbek</h3>
-      <div class="line half bgblue"></div>
-      <p><a href="mailto:ls@blankoslo.no" class="textlink">ls@blankoslo.no</a></p>
-      <img class="full" src="img/larsskjelbek.jpg" alt="Lars Skjelbek">
-    </div>
-  </div>
-  <div class="third left mobilehalf bggray-light">
-    <div class="box">
-      <h3 class="headingNormal">Mads Nyborg</h3>
-      <div class="line half bgyellow"></div>
-      <p><a href="mailto:mn@blankoslo.no" class="textlink">mn@blankoslo.no</a></p>
-      <img class="full" src="img/madsnyborg.jpg" alt="Mads Nyborg">
-    </div>
-  </div>
-  <div class="third left mobilehalf bggray-light">
-    <div class="box">
-      <h3 class="headingNormal">Magne Davidsen</h3>
-      <div class="line half bgred"></div>
-      <p><a href="mailto:mkd@blankoslo.no" class="textlink">mkd@blankoslo.no</a></p>
-      <img class="full" src="img/magnedavidsen.jpg" alt="Magne Davidsen">
-    </div>
-  </div>
-  <div class="third left mobilehalf bggray-light">
-    <div class="box">
-      <h3 class="headingNormal">Martin Gammels&aelig;ter</h3>
-      <div class="line half bgblue"></div>
-      <p><a href="mailto:mg@blankoslo.no" class="textlink">mg@blankoslo.no</a></p>
-      <img class="full" src="img/martingammelsaeter.jpg" alt="Martin Gammels&aelig;ter">
-    </div>
-  </div>
-  <div class="third left mobilehalf bggray-light">
-    <div class="box">
-      <h3 class="headingNormal">Ole Jacob Syrdahl</h3>
-      <div class="line half bgyellow"></div>
-      <p><a href="mailto:oj@blankoslo.no" class="textlink">oj@blankoslo.no</a></p>
-      <img class="full" src="img/olejacobsyrdahl.jpg" alt="Ole Jacob Syrdahl">
-    </div>
-  </div>
-  <div class="third left mobilehalf bggray-light">
-    <div class="box">
-      <h3 class="headingNormal">Petter Suul</h3>
-      <div class="line half bgblue"></div>
-      <p><a href="mailto:ps@blankoslo.no" class="textlink">ps@blankoslo.no</a></p>
-      <img class="full" src="img/pettersuul.jpg" alt="Petter Suul">
-    </div>
-  </div>
-  <div class="third left mobilehalf bggray-light">
-    <div class="box">
-      <h3 class="headingNormal">Silje L&oslash;kken R&oslash;dvik</h3>
-      <div class="line half bgred"></div>
-      <p><a href="mailto:slr@blankoslo.no" class="textlink">slr@blankoslo.no</a></p>
-      <img class="full" src="img/siljelokkenrodvik.jpg" alt="Silje L&oslash;kken R&oslash;dvik">
-    </div>
-  </div>
-  <div class="third left mobilehalf bggray-light">
-    <div class="box">
-      <h3 class="headingNormal">Yngvar Johnsen</h3>
-      <div class="line half bgblue"></div>
-      <p><a href="mailto:yj@blankoslo.no" class="textlink">yj@blankoslo.no</a></p>
-      <img class="full" src="img/yngvarjohnsen.jpg" alt="Yngvar Johnsen">
-    </div>
-  </div>
-</div>
+
+  {% endfor %}
 
 <div class="container" id="kontakt">
   <div class="half left mobilefull bgred-light">
