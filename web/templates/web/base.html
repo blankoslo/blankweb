@@ -1,3 +1,5 @@
+{% load staticfiles %}
+
 <!DOCTYPE html>
 
 <head>
@@ -5,7 +7,7 @@
 	<title>Blank - {% block title %}{% endblock %}</title>
 	<script src="https://use.typekit.net/dih0gem.js"></script>
 	<script>try{Typekit.load({ async: true });}catch(e){}</script>
-	<link rel="stylesheet" type="text/css" href="styleguide.css">
+	<link rel="stylesheet" type="text/css" href="{% static "styleguide.css" %}">
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1">
 	<script src="js/menumobile.js"></script>
 
@@ -14,7 +16,7 @@
 	<meta property="place:location:longitude" content="10.7440962" />
 	<meta property="fb:profile_id" content="blankoslo" />
 	<meta property="og:title" content="Blank" />
-	<meta property="og:image" content="http://blankoslo.no/img/div/blankoglogo.png" />
+	<meta property="og:image" content="{% static "img/blanklogo.png" %}" />
 	<meta property="og:image:width" content="1200"/>
 	<meta property="og:image:height" content="630"/>
 	<meta property="og:description" content="Vi skal hjelpe norske virksomheter med &aring; definere og n&aring; sine m&aring;l innen digital tjenesteutvikling. Vi bygger n&aring; opp et tverrfaglig byr&aring; innen design, r&aring;dgiving og utvikling." />
@@ -25,7 +27,7 @@
 	<meta name="twitter:title" content="Blank" />
 	<meta name="twitter:description" content="Vi skal hjelpe norske virksomheter med &aring; definere og n&aring; sine m&aring;l innen digital tjenesteutvikling. Vi bygger n&aring; opp et tverrfaglig byr&aring; innen design, r&aring;dgiving og utvikling." />
 	<meta name="twitter:url" content="http://blankoslo.no" />
-	<meta name="twitter:image" content="http://blankoslo.no/img/div/blankoglogo.png" />
+	<meta name="twitter:image" content="http://blankoslo.no/static/blankoglogo.png" />
 
 </head>
 
@@ -37,7 +39,7 @@
 		<div id="header">
 
 			<a href="index.html" id="index" class="indexactive">
-				<img alt="Blank Logo" src="img/div/blankutenstrek.svg">
+				<img alt="Blank Logo" src="{% static "img/blankutenstrek.svg" %}">
 			</a>
 			<div id="menu">
 				<ul>
@@ -52,11 +54,11 @@
 
 		<div id="mobileheader">
 			<a id="mobileindex" href="index.html">
-				<img alt="Blank Logo" src="img/div/BlankLogo-02.svg">
+				<img alt="Blank Logo" src="{% static "img/BlankLogo-02.svg" %}">
 			</a>
 
 			<a href="javascript:void(0);" id="menumobile" class="menumobilebutton" onclick="openmenumobile()">
-				<img src="img/div/navicon-02.svg" alt="Meny">
+				<img src="{% static "img/navicon-02.svg" %}" alt="Meny">
 			</a>
 
 			<div id="menumobileopen" style="display:none;" onclick="openmenumobile()">

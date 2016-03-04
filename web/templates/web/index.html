@@ -1,4 +1,7 @@
 {% extends "web/base.html" %}
+
+{% load staticfiles %}
+
 {% block title %}yolo{% endblock %}
 {% block content %}
 
@@ -17,7 +20,7 @@
   <div class="third left bgred-light mobilefull">
     <div class="box">
       <div class="mobiletextcenter">
-        <img class="bigicon" src="img/div/iconblack-01.svg">
+        <img class="bigicon" src="{% static "img/iconblack-01.svg" %}">
       </div>
       <h3 class="headingMedium mobiletextcenter">Design og bruker&shy;opplevelse</h3>
       <div class="half line bgred mobilecenter"></div>
@@ -28,7 +31,7 @@
   <div class="third left bgblue-light mobilefull">
     <div class="box">
       <div class="mobiletextcenter">
-        <img class="bigicon" src="img/div/iconblack-02.svg">
+        <img class="bigicon" src="{% static "img/iconblack-02.svg" %}">
       </div>
       <h3 class="headingMedium mobiletextcenter">Teknologi</h3>
       <div class="half line bgblue mobilecenter"></div>
@@ -39,7 +42,7 @@
   <div class="third left bgyellow-light mobilefull">
     <div class="box">
       <div class="mobiletextcenter">
-        <img class="bigicon" src="img/div/iconblack-03.svg">
+        <img class="bigicon" src="{% static "img/iconblack-03.svg" %}">
       </div>
       <h3 class="headingMedium mobiletextcenter">Forretnings&shy;design</h3>
       <div class="half line bgyellow mobilecenter"></div>
@@ -51,7 +54,7 @@
 
 <div class="container" id="menneskene">
   <div class="icontop textcenter">
-    <img class="bigicon" src="img/div/iconblack-04.svg" alt="menneskerikon">
+    <img class="bigicon" src="{% static "img/iconblack-04.svg" %}" alt="menneskerikon">
   </div>
   <h2 class="headingLarge textcenter">Menneskene i blank</h2>
 
@@ -189,6 +192,104 @@
 </div>
 
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
-<script src="js/googlemap.js"></script>
+<script>
+window.onload = function () {
+    var styles = [
+  {
+    "elementType": "labels",
+    "stylers": [
+      { "visibility": "off" },
+    ]
+  },{
+    "featureType": "road",
+    "elementType": "geometry",
+    "stylers": [
+      { "visibility": "on" },
+      { "color" : "#cccccc" }
+    ]
+  },{
+    "featureType": "road",
+    "elementType": "labels",
+    "stylers": [
+      { "visibility" : "off"},
+      { "color" : "#000000" },
+    ]
+  },{
+    "featureType": "road.local",
+    "elementType": "labels",
+    "stylers": [
+      { "visibility" : "simplified"},
+      { "color" : "#000000" },
+    ]
+  },{
+    "featureType": "transit.line",
+    "elementType": "geometry",
+    "stylers": [
+      { "visibility": "simplified" },
+      { "color": "#999999" }
+    ]
+  },{
+    "featureType": "poi",
+    "stylers": [
+      { "color": "#fdd757" }
+    ]
+  },{
+    "featureType": "poi.park",
+    "stylers": [
+      { "color": "#26D07C" }
+    ]
+  },{
+    "featureType": "poi.school",
+    "stylers": [
+      { "visibility": "off" }
+    ]
+  },{
+    "featureType": "landscape",
+    "stylers": [
+      { "color": "#eaecea" }
+    ]
+  },{
+    "featureType": "water",
+    "stylers": [
+      { "color": "#cdeff8" }
+    ]
+  }
+];
+
+    var myLatLng = {lat: 59.914029, lng: 10.746296};
+
+    if(window.innerWidth > 768){var drag = true}
+    else{var drag = false};
+
+    var options = {
+        mapTypeControlOptions: {mapTypeIds: ['Styled']},
+        center: myLatLng,
+        zoom: 14,
+        scrollwheel: false,
+        draggable: drag,
+        disableDefaultUI: true,
+        zoomControl: true,
+        mapTypeId: 'Styled'
+    };
+
+    var div = document.getElementById('map');
+    var map = new google.maps.Map(div, options);
+    var styledMapType = new google.maps.StyledMapType(styles, { name: 'Styled' });
+    map.mapTypes.set('Styled', styledMapType);
+
+    var marker = new google.maps.Marker({
+        position: myLatLng,
+        map: map,
+        icon: '{% static "img/marker.svg" %}',
+        size: new google.maps.Size(43, 116),
+        scaledSize: new google.maps.Size(21.5, 58),
+        origin: new google.maps.Point(0, 0),
+        anchor: new google.maps.Point(0, 21.5)
+
+
+    });
+
+};
+</script>
 
 {% endblock %}
