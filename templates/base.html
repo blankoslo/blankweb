@@ -9,7 +9,7 @@
 	<script>try{Typekit.load({ async: true });}catch(e){}</script>
 	<link rel="stylesheet" type="text/css" href="{% static "styleguide.css" %}">
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1">
-	<script src="js/menumobile.js"></script>
+	<script src="{% static "menumobile.js" %}"></script>
 
 	<meta property="og:type" content="place" />
 	<meta property="place:location:latitude"  content="59.9140184" />
@@ -43,10 +43,10 @@
 			</a>
 			<div id="menu">
 				<ul>
-					<li><a href="index.html#jobb">Jobb</a></li>
-					<li><a href="index.html#menneskene">Menneskene</a></li>
-					<li><a href="index.html#kontakt">Kontakt</a></li>
-					<li><a href="omoss.html">Om oss</a></li>
+					<li><a href="/#jobb">Jobb</a></li>
+					<li><a href="/#menneskene">Menneskene</a></li>
+					<li><a href="/#kontakt">Kontakt</a></li>
+					<li><a href="/omoss/">Om oss</a></li>
 					<li><a href="https://blogg.blankoslo.no" target="_blank">Blogg</a></li>
 				</ul>
 			</div>
@@ -63,10 +63,10 @@
 
 			<div id="menumobileopen" style="display:none;" onclick="openmenumobile()">
 				<ul>
-					<li><a href="index.html#jobb">Jobb</a></li>
-					<li><a href="index.html#menneskene">Menneskene</a></li>
-					<li><a href="index.html#kontakt">Kontakt</a></li>
-					<li><a href="omoss.html">Om oss</a></li>
+					<li><a href="/#jobb">Jobb</a></li>
+					<li><a href="/#menneskene">Menneskene</a></li>
+					<li><a href="/#kontakt">Kontakt</a></li>
+					<li><a href="/omoss/">Om oss</a></li>
 					<li><a href="https://blogg.blankoslo.no" target="_blank">Blogg</a></li>
 				</ul>
 			</div>
