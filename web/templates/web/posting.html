@@ -1,0 +1,28 @@
+{% extends "web/posting_base.html" %}
+{% load staticfiles %}
+{% block title %}blank - jobb{% endblock %}
+
+{% block intro %}
+<div class="full">
+  <div class="container">
+
+  </div>
+</div>
+{% endblock %}
+
+{% block posting %}
+
+<div id="jobs-list" class="twothirds left mobilefull">
+  <div class="full spacing bgfff">
+    <div class="boxbig">
+      <div class="icontop">
+        <img class="bigicon" src="{% static "img/iconblack-04.svg" %}" alt="menneskerikon"></div>
+      <h3 class="headingMedium">{{posting.text}}</h3>
+      <div class="third line bgblue"> </div>
+      <div class="description">{% autoescape off %}{{posting.description}}{% endautoescape %}</div>
+      <a class="button bgblue half left mobilefull" href="sommerstipend_skjema.html?id=62454c10-5145-403f-b87c-0a8489eb9448">Søk på stillingen</a>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

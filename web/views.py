@@ -2,13 +2,9 @@ from django.shortcuts import render
 from django.http import HttpResponse
 import requests
 
-from .models import Employee
+from .models import Employee, JobPostingCategory
 
 POSTINGS_ROOT = 'https://api.lever.co/v0/postings/blankoslo'
-
-TECH_TEAM = 'Teknologi'
-DESIGN_TEAM = 'Brukeropplevelse'
-BUSINESS_TEAM = 'Forretningsdesign'
 
 def index(request):
     all_employees = Employee.objects.all()
@@ -16,15 +12,12 @@ def index(request):
     return render(request, 'web/index.html', context)
 
 def posting(request, posting_id):
-    def get_template(team):
-        return {
-            TECH_TEAM : 'web/posting_tech.html',
-            DESIGN_TEAM : 'web/posting_design.html',
-            BUSINESS_TEAM : 'web/posting_business.html',
-        }.get(team, 'web/posting_business.html')
-
     posting_dict = requests.get(POSTINGS_ROOT + '/' + posting_id).json()
-    template = get_template(posting_dict['categories']['team'])
-    context = {'text': posting_dict['text'], 'description': posting_dict['description']}
+    team = posting_dict['categories']['team'].lower()
+    context = {'posting':posting_dict, 'contact': JobPostingCategory.objects.filter(team=team)[0].hiring_manager}
+    return render(request, 'web/posting.html', context)
 
-    return render(request, template, context)
+def team_postings(request, team):
+    postings_array = requests.get(POSTINGS_ROOT + '?team=' + team + '&mode=json').json()
+    context = {'team_postings' :  postings_array, 'category': JobPostingCategory.objects.filter(team=team)[0]}
+    return render(request, 'web/postings.html', context)
