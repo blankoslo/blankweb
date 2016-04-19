@@ -1,5 +1,8 @@
+apache-libcloud==0.20.1
+backports.ssl-match-hostname==3.5.0.1
 dj-database-url==0.4.1
 Django==1.9.3
+django-storages==1.4.1
 gunicorn==19.4.5
 Pillow==3.1.1
 psycopg2==2.6.1

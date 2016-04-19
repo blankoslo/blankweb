@@ -138,3 +138,16 @@ STATICFILES_DIRS = (
 )
 
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+
+LIBCLOUD_PROVIDERS = {
+    'google': {
+        'type': 'libcloud.storage.types.Provider.GOOGLE_STORAGE',
+        'user': os.environ['GOOGLE_STORAGE_USER'],
+        'key': os.environ['GOOGLE_STORAGE_KEY'],
+        'bucket': os.environ['GOOGLE_STORAGE_BUCKET'],
+    },
+}
+
+DEFAULT_LIBCLOUD_PROVIDER = 'google'
+
+DEFAULT_FILE_STORAGE = 'storages.backends.apache_libcloud.LibCloudStorage'
