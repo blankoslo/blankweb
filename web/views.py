@@ -7,8 +7,8 @@ from .models import Employee, JobPostingCategory
 POSTINGS_ROOT = 'https://api.lever.co/v0/postings/blankoslo'
 
 def index(request):
-    all_employees = Employee.objects.all()
-    context = {'all_employees': all_employees}
+    all_employees = Employee.objects.order_by('?').all()
+    context = {'all_employees': all_employees, 'color_classes': ['bgblue', 'bgred', 'bgyellow']}
     return render(request, 'web/index.html', context)
 
 def posting(request, posting_id):

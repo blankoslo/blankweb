@@ -2,7 +2,7 @@
 
 {% load staticfiles %}
 
-{% block title %}yolo{% endblock %}
+{% block title %}{% endblock %}
 {% block content %}
 
 <div class="container" id="intro">
@@ -63,7 +63,7 @@
   <div class="third left mobilehalf bggray-light">
     <div class="box">
       <h3 class="headingNormal">{{employee.name}}</h3>
-      <div class="line half bgblue"></div>
+      <div class="line half {{ color_classes|random }}"></div>
       <p><a href="mailto:{{employee.email}}" class="textlink">{{employee.email}}</a></p>
       <img class="full" src="{{employee.image.url}}" alt="{{employee.name}}">
     </div>
