@@ -1,1 +1,1 @@
-web: gunicorn blankweb.wsgi --log-file -
+web: newrelic-admin run-program gunicorn blankweb.wsgi
