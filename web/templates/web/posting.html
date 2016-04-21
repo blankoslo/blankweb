@@ -20,7 +20,8 @@
       <h3 class="headingMedium">{{posting.text}}</h3>
       <div class="third line bgblue"> </div>
       <div class="description">{% autoescape off %}{{posting.description}}{% endautoescape %}</div>
-      <a class="button bgblue half left mobilefull" href="sommerstipend_skjema.html?id=62454c10-5145-403f-b87c-0a8489eb9448">Søk på stillingen</a>
+      <div class="apply">Send søknad på mail til <a href="mailto:{{category.hiring_manager.email}}" >{{category.hiring_manager.email}}</a>, eller bruk skjema.</div>
+      <a class="button bgblue half left mobilefull" target="_blank" href="https://jobs.lever.co/blankoslo/{{posting.id}}/apply">Søk på stillingen</a>
     </div>
   </div>
 </div>

@@ -351,6 +351,11 @@ a.textlink:hover:after {
 .description {margin: 1.5em 0;}
 .description br{display: none;}
 
+.apply {
+	font-weight: bold;
+	font-style: italic;
+}
+
 
 /* FORMS */
 
