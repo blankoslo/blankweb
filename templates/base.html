@@ -78,7 +78,18 @@
 
   <script type="text/javascript">
   window.onscroll = function(){
-  		if (window.innerWidth > 960){scrollpos();}
+		var jobbposExists = document.getElementById("jobb") != null;
+		var menneskeneposExists = document.getElementById("menneskene") != null;
+		var kontaktposExists = document.getElementById("kontakt") != null;
+
+		var containsMenu = document.getElementById("menu") != null;
+		var containsIndex = document.getElementById("index") != null;
+
+		var hasScrollableContents = jobbposExist && menneskeneposExists && kontaktposExists && containsMenu && containsIndex;
+
+		if (window.innerWidth > 960 && hasScrollableContents){
+			  scrollpos();
+		}
   		else {}
   }
   </script>
