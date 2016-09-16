@@ -14,7 +14,7 @@ def index(request):
 def posting(request, posting_id):
     posting_dict = requests.get(POSTINGS_ROOT + '/' + posting_id).json()
     team = posting_dict['categories']['team'].lower()
-    context = {'posting':posting_dict, 'contact': JobPostingCategory.objects.filter(team=team)[0].hiring_manager}
+    context = {'posting':posting_dict, 'contact': JobPostingCategory.objects.filter(team=team)[0]}
     return render(request, 'web/posting.html', context)
 
 def team_postings(request, team):
