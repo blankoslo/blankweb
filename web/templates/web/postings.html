@@ -2,7 +2,13 @@
 {% load staticfiles %}
 
 {% block intro %}
-<div class="full bgblue-light">
+{% if team = 'teknologi' %}
+  <div class="full bgblue-light">
+{% elif team = 'brukeropplevelse' %}
+  <div class="full bgred-light">
+{% else %}
+  <div class="full bgyellow-light">
+{% endif %}
   <div class="container">
     <div class="twothirds mobilefull left">
       <div class="boxbig">
