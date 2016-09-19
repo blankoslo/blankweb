@@ -14,7 +14,7 @@
 
       <!-- YELLOWBOX START -->
       <div class="spacing">
-        <div class="third mobilefull right bgyellow-light">
+        <div class="third mobilefull right bggray-light">
           <div class="box">
             <h3 class="headingMedium">Hos oss får alle</h3>
             <ul class="textlist">
@@ -39,7 +39,13 @@
               <p>..eller har du lyst til å komme innom for en kaffe og en uformell prat? Ta gjerne kontakt, vi gleder oss til å bli kjent med deg.</p><br>
 
               <div class="full smallhalf mobiletwothirds nomargin right">
-                <div class="line half mobilethird bgblue"></div>
+                {% if team = 'teknologi' %}
+                  <div class="line half mobilethird bgblue"></div>
+                {% elif team = 'brukeropplevelse' %}
+                  <div class="line half mobilethird bgred"></div>
+                {% else %}
+                  <div class="line half mobilethird bgyellow"></div>
+                {% endif %}
                 <p>{{ category.hiring_manager.name }}<br>
                   <a href="mailto:{{ category.hiring_manager.email }}" class="textlink">{{ category.hiring_manager.email }}</a><br>
                   {{ category.hiring_manager.phone }}<br></p>

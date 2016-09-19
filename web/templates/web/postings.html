@@ -13,7 +13,13 @@
     <div class="twothirds mobilefull left">
       <div class="boxbig">
         <div class="icontop">
-          <img class="bigicon" src="{% static "img/iconblack-02.svg" %}">
+          {% if team = 'teknologi' %}
+            <img class="bigicon" src="{% static "img/iconblack-02.svg" %}">
+          {% elif team = 'brukeropplevelse' %}
+            <img class="bigicon" src="{% static "img/iconblack-01.svg" %}">
+          {% else %}
+            <img class="bigicon" src="{% static "img/iconblack-03.svg" %}">
+          {% endif %}
         </div>
         <h1 class="headingLarge">{{ category.title }}</h1>
         <p class="lead">{{ category.description }}</p>
@@ -32,10 +38,23 @@
       <div class="icontop">
         <img class="bigicon" src="{% static "img/iconblack-04.svg" %}" alt="menneskerikon"></div>
       <h3 class="headingMedium">{{posting.text}}</h3>
-      <div class="third line bgblue"></div>
+      {% if team = 'teknologi' %}
+        <div class="third line bgblue"></div>
+      {% elif team = 'brukeropplevelse' %}
+        <div class="third line bgred"></div>
+      {% else %}
+        <div class="third line bgyellow"></div>
+      {% endif %}
       <div class="description">{% autoescape off %}{{posting.description}}{% endautoescape %}</div>
       <div class="apply">Send søknad på mail til <a href="mailto:{{category.hiring_manager.email}}" >{{category.hiring_manager.email}}</a>, eller bruk skjema.</div>
-      <a class="button bgblue half left mobilefull" target="_blank" href="https://jobs.lever.co/blankoslo/{{posting.id}}/apply">Søk på stillingen</a>
+      {% if team = 'teknologi' %}
+        <a class="button bgblue half left mobilefull" target="_blank" href="https://jobs.lever.co/blankoslo/{{posting.id}}/apply">Søk på stillingen</a>
+      {% elif team = 'brukeropplevelse' %}
+        <a class="button bgred half left mobilefull" target="_blank" href="https://jobs.lever.co/blankoslo/{{posting.id}}/apply">Søk på stillingen</a>
+      {% else %}
+        <a class="button bgyellow half left mobilefull" target="_blank" href="https://jobs.lever.co/blankoslo/{{posting.id}}/apply">Søk på stillingen</a>
+      {% endif %}
+
     </div>
   </div>
   {% endfor %}
