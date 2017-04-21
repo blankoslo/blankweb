@@ -39,7 +39,7 @@ html, body{
 }
 .hero-design-text{
 	position: absolute;
-	top: 15em;
+	bottom: 5em;
 	text-align: center;
 
 }
@@ -464,14 +464,27 @@ input[type=submit]{
 	.mobilefull		{width: 100%;margin:1em 0 0 0;overflow: hidden;}
 	.square				{width: 100%;height: auto;margin-top: 0;}
 
-	p{line-height: 1.75em;}
 	.mobilecenter		{margin-left: auto;margin-right: auto;}
 	.mobiletextcenter	{text-align: center}
+
+	.container.hero{
+		width: 100%;
+		max-width: 100%;
+		padding: 0;
+	}
+
+	.hero-design{
+		min-height: 320px;
+	}
+
+	.hero-design-text{
+		bottom: 1em;
+	}
 
 	.hero-design-text h1{
 		display: inline-block;
 		padding: .25em .5em;
-		font-size: 4em;
+		font-size: 3em;
 	}
 }
 
@@ -479,7 +492,7 @@ input[type=submit]{
 @media screen and (max-width: 40em) {
 	#mobileheader{font-size: 1.2em;}
 
-	.boxbig{padding: 2em;}
+	.boxbig, .box{padding: 1.5em;}
 	.mobilehalf{width: 100%;margin: 1em 0 0 0;}
 	.smallhalf{width: 100%;margin: 1em 0 0 0;}
 	.square	{margin-top: 1em;}
@@ -490,7 +503,6 @@ input[type=submit]{
 	.headingLarge{font-size: 1.6em;margin: 0 0 1.25em 0}
 	.headingMedium{font-size: 1.25em;margin: 0 0 1.6em 0}
 	.headingNormal{font-size: 1em;min-height:1em;margin: 0 0 1em 0;}
-	.lead{font-size: 1em;}
 }
 
 /* HEIGHT 640PX */
