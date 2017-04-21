@@ -19,11 +19,43 @@ html, body{
 	position: relative;
 }
 
+.container.hero{
+	padding: 4em 0 0 0;
+}
+
 .full		{width: 100%;display: block;overflow: hidden;}
 .half		{width: 47.5%;display: block;overflow: hidden;}
 .third		{width: 31.3%;display: block;overflow: hidden;}
 .twothirds	{width: 64.5%;display: block;overflow: hidden;}
 .fullheight	{height: 100%;}
+
+.hero-design{
+	min-height: 480px;
+	margin-bottom: 0 !important;
+	background-image: url(/static/img/design-bg.png);
+	background-size: cover;
+	background-position: center;
+	background-blend-mode: multiply;
+}
+.hero-design-text{
+	position: absolute;
+	top: 15em;
+	text-align: center;
+}
+.hero-design-text h1{
+	display: inline-block;
+	padding: .25em .5em;
+	font-size: 6em;
+	background-color: #fff;;
+	color: #f8485e;
+}
+
+.col-img{
+	width: 100%;
+	margin: 0 2em 0 0;
+	float: left;
+}
+.col-img img, .col-img video{width: 100%;margin: 1em 0;}
 
 /* FLOAT */
 
@@ -187,6 +219,7 @@ a.menuactive:after {
 
 .box		{padding: 2em;overflow: hidden;position: relative;}
 .boxbig		{padding: 4em;overflow: hidden;}
+.boxwide		{padding: 4em;overflow: hidden;}
 
 .bigline	{width: 100%;padding-top: 25%;margin: 0.5em 0;}
 .line		{height: 0.5em;margin: 0 0 1em 0;}
@@ -435,6 +468,12 @@ input[type=submit]{
 	p{line-height: 1.75em;}
 	.mobilecenter		{margin-left: auto;margin-right: auto;}
 	.mobiletextcenter	{text-align: center}
+
+	.hero-design-text h1{
+		display: inline-block;
+		padding: .25em .5em;
+		font-size: 4em;
+	}
 }
 
 /* WIDTH 640PX */
