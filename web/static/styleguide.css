@@ -478,13 +478,17 @@ input[type=submit]{
 	}
 
 	.hero-design-text{
-		bottom: 1em;
+		bottom: 0em;
 	}
 
 	.hero-design-text h1{
 		display: inline-block;
 		padding: .25em .5em;
-		font-size: 3em;
+		font-size: 5em;
+		background-color: unset;
+		color: #fff;
+		margin: 0;
+		text-align: left;
 	}
 }
 
