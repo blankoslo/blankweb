@@ -11,7 +11,7 @@ html, body{
 }
 
 .container{
-	max-width: 73em;
+	max-width: 1440px;
 	width: 90%;
 	padding: 8em 0 2em 0;
 	margin: 0 auto;
@@ -41,6 +41,7 @@ html, body{
 	position: absolute;
 	top: 15em;
 	text-align: center;
+
 }
 .hero-design-text h1{
 	display: inline-block;
@@ -80,7 +81,7 @@ html, body{
 	width: 90%;
 	padding: 2em;
 	margin: auto;
-	max-width: 73em;
+	max-width: 1440px;
 	background-color: #fff;
 	overflow: hidden;
 }
@@ -441,9 +442,6 @@ input[type=submit]{
 
 
 @media screen and (min-width: 120em) {
-
-	#header		{max-width:90%;}
-	.container	{max-width: 90%;}
 	#jobb.box 	{padding: 4em;overflow: hidden;}
 	.smallhalf	{width: 47.5%;}
 	.square		{margin-top: 0;}
