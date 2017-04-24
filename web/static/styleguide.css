@@ -296,7 +296,7 @@ a.textlink:hover:after {
 	font-size: 1em;
 	line-height: 1.5em;
 	padding: 0;
-	margin: 0 0 0.5em 1em;
+	margin: 0 0 0.5em 1.25em;
 	letter-spacing: 0.05em;
 	list-style: disc;
 }
