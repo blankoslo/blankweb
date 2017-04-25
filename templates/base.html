@@ -11,17 +11,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1">
 	<script src="{% static "menumobile.js" %}"></script>
 
-	<meta property="og:type" content="place" />
 	<meta property="place:location:latitude"  content="59.9140184" />
 	<meta property="place:location:longitude" content="10.7440962" />
 	<meta property="fb:profile_id" content="blankoslo" />
-	<meta property="og:title" content="Blank" />
-	<meta property="og:image" content="{% static "img/blankoglogo.png" %}" />
-	<meta property="og:image:width" content="1200"/>
-	<meta property="og:image:height" content="630"/>
-	<meta property="og:description" content="Blank er et teknologi- og designmilj&oslash; med en alternativ filosofi og tiln&aelig;rming til konsulent- og arbeidslivet. Vi utvikler ogs&aring; egne produkter, har h&oslash;ye ambisjoner og m&aring; bli flere for &aring; kunne levere p&aring; m&aring;lene v&aring;re." />
-	<meta property="og:site_name" content="Et teknologi- og designmilj&oslash; ."/>
-	<meta property="og:locale" content="nb_NO" />
 
 	<meta name="twitter:card" content="summary" />
 	<meta name="twitter:title" content="Blank" />
@@ -29,7 +21,16 @@
 	<meta name="twitter:url" content="https://www.blank.no" />
 	<meta name="twitter:image" content="https://www.blank.no/static/blankoglogo.png" />
 
-	{% block opengraph %}{% endblock %}
+	{% block opengraph %}
+	<meta property="og:type" content="place" />
+	<meta property="og:title" content="Blank" />
+	<meta property="og:image" content="{% static "img/blankoglogo.png" %}" />
+	<meta property="og:image:width" content="1200"/>
+	<meta property="og:image:height" content="630"/>
+	<meta property="og:description" content="Blank er et teknologi- og designmilj&oslash; med en alternativ filosofi og tiln&aelig;rming til konsulent- og arbeidslivet. Vi utvikler ogs&aring; egne produkter, har h&oslash;ye ambisjoner og m&aring; bli flere for &aring; kunne levere p&aring; m&aring;lene v&aring;re." />
+	<meta property="og:site_name" content="Et teknologi- og designmilj&oslash; ."/>
+	<meta property="og:locale" content="nb_NO" />
+	{% endblock %}
 
 </head>
 
