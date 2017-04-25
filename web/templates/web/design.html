@@ -1,6 +1,15 @@
 {% extends "web/posting_base.html" %}
 {% load staticfiles %}
 
+{% block opengraph %}
+<meta property="og:url"         content="https://blank.no/jobb/brukeropplevelse" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Bli designer i Blank" />
+<meta property="og:description" content="Dyktig digital designer? Lyst på ny jobb?" />
+<meta property="og:image"       content="https://storage.googleapis.com/blankweb/opengraph/brukeropplevelse.png" />
+<meta property="og:locale"      content="nb_NO" />
+{% endblock %}
+
 {% block intro %}
 <div class="full bgred">
   <div class="container hero">
