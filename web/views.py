@@ -26,3 +26,8 @@ def team_design(request):
     postings_array = requests.get(POSTINGS_ROOT + '?team=' + 'brukeropplevelse' + '&mode=json').json()
     context = {'team_postings' :  postings_array, 'category': JobPostingCategory.objects.filter(team='brukeropplevelse')[0], 'team' : 'brukeropplevelse'}
     return render(request, 'web/design.html', context)
+
+def team_tekonologi(request):
+    postings_array = requests.get(POSTINGS_ROOT + '?team=' + 'teknologi' + '&mode=json').json()
+    context = {'team_postings' :  postings_array, 'category': JobPostingCategory.objects.filter(team='teknologi')[0], 'team' : 'teknologi'}
+    return render(request, 'web/teknologi.html', context)

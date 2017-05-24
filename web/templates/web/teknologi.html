@@ -1,0 +1,82 @@
+{% extends "web/posting_base.html" %}
+{% load staticfiles %}
+
+{% block opengraph %}
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Bli utvikler i Blank" />
+<meta property="og:site_name"   content="Et teknologi- og designmilj&oslash; ."/>
+<meta property="og:description" content="Dyktig utvikler? Lyst på ny jobb?" />
+<meta property="og:image"       content="https://storage.googleapis.com/blankweb/opengraph/brukeropplevelse.png" />
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="og:locale"      content="nb_NO" />
+{% endblock %}
+
+{% block intro %}
+<div class="full bgred">
+  <div class="container hero">
+    <div class="twothirds bgred mobilefull left hero-design">
+    </div>
+    <div class="full hero-design-text">
+      <h1 class="headingLarge">Bli utvikler i Blank</h1>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block posting %}
+
+<div id="jobs-list" class="twothirds left mobilefull">
+  <div class="full spacing bgfff">
+    <div class="boxbig">
+      <p class="lead">Blank er et design- og teknologimiljø. Er du en drivende dyktig utvikler som elsker å hjelpe andre å realisere sine ideer, er du antakelig midt i blinken for oss. Vi bryr oss lite om hvilken tittel du har foran designer. Vi ønsker oss folk som tenker selv og skaper sine egne roller.</p>
+
+      <div class="apply">
+        <a class="button bgred half apply-button mobilefull" target="_blank" href="https://jobs.lever.co/blankoslo/d4fe3213-768c-4c9b-b9dc-1a1ee443b46e/apply">Søk på stillingen</a>
+        <br>
+      </div>
+
+      <div class="full" id="jobbemed">
+        <h2>Lønn og betingelser</h2>
+        <p>Folk skal ha god lønn og rettferdige betingelser. For å gjøre det enkelt har vi lagt ut både prinsipper og detaljer på <a class="textlink" href="https://betingelser.blank.no">betingelser.blank.no</a>.</p>
+
+        <h2>Dette vil du jobbe med</h2>
+        <p>Du vil jobbe som utvikler sammen med andre i relativt små team, og du vil bruke mye tid på lære deg nye ting eller bli enda bedre på ting du allerede kan. Vi i Blank jobber blant annet med kunder som som ice.net, reMarkable, Telenor, kolonial.no og vi jobber med startups som kanskje vil bli like kjente om en stund. I tillegg lager vi egne digitale tjenester –  mest fordi vi har lyst.</p>
+
+        <h2>Dette ønsker vi fra deg</h2>
+        <p>Du bør være en selvdreven person som takler at vi er i utvikling. Du bør være trygg på egne ferdigheter, og du bør ha en trang til å utforske og undersøke, og du må kunne være med å drive fagfeltet vårt fremover.</p>
+
+        <p><i>Hold deg fast – her kommer lista:</i></p>
+        <ul class="textlist">
+          <li>Du er nysgjerrig, motivert og selvdreven, fordi vi stoler på deg og gir deg tillit til å kjøre på!</li>
+          <li>Du må ønske å ta faglig ansvar, både internt og på prosjekt, fordi vi selger kunnskap og da må vi lære noe nytt hele tiden.</li>
+          <li>Det er fabelaktig hvis du har en relevant utdanning på, men det er ikke et krav. Så lenge du passerer rekrutteringsprosessen vår holder det for oss!</li>
+        </ul>
+
+        <h2>Dette kan du forvente fra oss i Blank:</h2>
+        <ul class="textlist">
+          <li>Et godt arbeidsmiljø med latterlig stor takhøyde.</li>
+          <li>Bra lønn (fordi det skal folk ha.)</li>
+          <li>Tilhørighet i et særdeles sterkt fagmiljø.</li>
+          <li>Mulighet til å påvirke din egen arbeidsdag, fordi du får lov til å være med å eie sjappa. Vi eier alt sammen selv og bestemmer alt selv.</li>
+          <li>Spennende prosjekter (se <a class="textlink" href="#jobbemed">dette vil du jobbe med</a>)</li>
+        </ul>
+        <p>Les mer om dine betingelser på <a class="textlink" href="https://betingelser.blank.no">betingelser.blank.no</a></p>
+
+
+        <h2>Vil du vite mer...</h2>
+        <p>...eller har du lyst til å komme innom for en kaffe og en uformell prat? Ta gjerne kontakt, vi gleder oss til å bli kjent med deg.</p>
+        <br>
+
+      </div>
+
+      <div class="apply">
+        <a class="button bgred half apply-button mobilefull" target="_blank" href="https://jobs.lever.co/blankoslo/d4fe3213-768c-4c9b-b9dc-1a1ee443b46e/apply">Søk på stillingen</a>
+        Eller send en mail til <a class="textlink" href="mailto:{{category.hiring_manager.email}}?subject=Jeg vil bli utvikler i blank!" >{{category.hiring_manager.email}}</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}
