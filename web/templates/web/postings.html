@@ -48,11 +48,11 @@
       <div class="description">{% autoescape off %}{{posting.description}}{% endautoescape %}</div>
       <div class="apply">
         {% if team = 'teknologi' %}
-          <a class="button bgblue half left mobilefull" target="_blank" href="https://jobs.lever.co/blankoslo/{{posting.id}}/apply">Søk nå</a>
+          <a class="button bgblue half apply-button mobilefull" target="_blank" href="https://jobs.lever.co/blankoslo/{{posting.id}}/apply">Søk nå</a>
         {% elif team = 'brukeropplevelse' %}
-          <a class="button bgred half left mobilefull" target="_blank" href="https://jobs.lever.co/blankoslo/{{posting.id}}/apply">Søk nå</a>
+          <a class="button bgred half apply-button mobilefull" target="_blank" href="https://jobs.lever.co/blankoslo/{{posting.id}}/apply">Søk nå</a>
         {% else %}
-          <a class="button bgyellow half left mobilefull" target="_blank" href="https://jobs.lever.co/blankoslo/{{posting.id}}/apply">Søk nå</a>
+          <a class="button bgyellow half apply-button mobilefull" target="_blank" href="https://jobs.lever.co/blankoslo/{{posting.id}}/apply">Søk nå</a>
         {% endif %}
         Eller send en mail til <a class="textlink" href="mailto:{{category.hiring_manager.email}}?subject=Jeg vil bli utvikler i blank!" >{{category.hiring_manager.email}}</a>
       </div>
