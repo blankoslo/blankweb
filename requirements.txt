@@ -1,7 +1,7 @@
 apache-libcloud==0.20.1
 backports.ssl-match-hostname==3.5.0.1
 dj-database-url==0.4.1
-Django==1.11.28
+Django==1.11.29
 django-storages==1.4.1
 gunicorn==19.4.5
 newrelic==2.64.0.48
